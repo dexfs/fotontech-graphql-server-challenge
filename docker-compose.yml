@@ -1,0 +1,52 @@
+#v3 syntax
+version: '3'
+
+#Named volumes
+volumes:
+  #mongodb Data
+  fotontech-mongodb-data:
+    driver: local
+
+services:
+  
+  fotontech-challenge-mongodb:
+    image: bitnami/mongodb:latest
+    volumes:
+      - fotontech-mongodb-data:/bitnami
+    ports:
+      - "27017:27017"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+  # graphql-server:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/node8/Dockerfile
+  #   container_name: ac_platform_api
+  #   command: yarn run watch
+  #   working_dir: /var/www/app
+  #   volumes:
+  #     - ./:/var/www/app
+  #     - /var/www/app/node_modules
+  #   links:
+  #     - mongodb
+  #     - cache
+  #     - postgres
+  #   depends_on:
+  #     - mongodb
+  #     - cache
+  #     - postgres
+  #   ports:
+  #     - 3000:3000
+  #   environment:
+  #     - MONGODB_DEBTS_URI=mongodb://ac_platform_mongodb:27017/debts
+  #     - MONGODB_MAILING_URI=mongodb://ac_platform_mongodb:27017/mailing
+  #     - DIR_MIGRATIONS=./src/database/migrations/operational
+  #     - DIR_SEEDS=./src/database/seeds/development/operational
+  #     - REDIS_DSN=redis://ac_platform_cache:6379
+  #     - NODE_ENV=development
+  #     - LOGGER_ENABLED=true
+  #     - LOGGER_LEVEL=debug
+  #     - DB_HOST=act-platform-postgres
+  #     - DB_USER=operational
+  #     - DB_PASSWORD=operational
+  #     - DB_DATABASE=operational
