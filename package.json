@@ -7,21 +7,21 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "apollo-server": "^2.1.0",
+    "apollo-server": "^2.11.0",
     "bcryptjs": "2.4.3",
-    "graphql": "^14.0.2",
-    "graphql-relay": "0.5.5",
-    "jsonwebtoken": "8.2.0",
+    "graphql": "^15.0.0",
+    "graphql-relay": "0.6.0",
+    "jsonwebtoken": "8.5.1",
     "lodash": "^4.17.15",
-    "mongoose": "5.7.5",
+    "mongoose": "5.9.7",
     "mongoose-paginate": "^5.0.3",
-    "validator": "9.4.1"
+    "validator": "13.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "nodemon": "^1.18.4"
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "nodemon": "^2.0.2"
   }
 }
